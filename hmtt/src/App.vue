@@ -3,11 +3,11 @@
 </template>
 
 <script>
+import { getAllChannelsAPI } from '@/api'
 export default {
-  methods: {
-    da () {
-      console.log()
-    }
+  async created () {
+    const res = await getAllChannelsAPI()
+    console.log(res)
   }
 }
 </script>
